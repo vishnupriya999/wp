@@ -1,0 +1,101 @@
+*{
+margin: 0;
+padding: 0;
+}
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../img2.jpg);
+	height: 1100px;
+	background-size: cover;
+	background-position: cover;	
+}
+
+ul{
+	float: right;
+	list-style-type: none;
+	margin-top: 30px;
+	
+}
+ul li{
+	display: inline-block;
+}
+ul li a{
+	text-decoration:none;
+	color: white;
+	padding: 5px 20px;
+	border: 1px solid transparent;
+	transition: 0.9s ease;
+	font-size: 20px;
+}
+ul li a:hover{
+	background-color: #fff;
+	color: #000;
+	font-size: 30px;
+}
+ul li.active a{
+	background-color: #fff;
+	color: #000;	
+}
+#nav ul{
+	float: left;
+	list-style-type: none;
+	margin-left: 30px;
+	
+}
+
+#nav ul li{
+	display: block;
+}
+
+#nav ul li{
+	list-style-type: none;
+	padding-top:15px;
+}
+#nav li a{
+		text-decoration: none;
+		color:white;
+		font-size: 20px;
+		font-family: Times New Roman;
+
+}
+#nav ul li a:hover{
+	text-decoration: none;
+		color:black;
+		font-size: 30px;
+}
+	
+.main{
+	max-width: 1200px;
+	margin: auto;
+}
+.container{
+	width: 80%;
+	height: 1000px;
+	height: 990px;
+	background: rgba(0,0,0,.4);
+	overflow: hidden;
+	margin: 5px auto;
+	padding: 20px;
+}
+.box{
+	background: rgba(0,0,0,.4);
+	float: left;
+	margin: 0px 10px;
+	padding: 20px;
+}
+#footer {
+	background: rgba(0,0,0,.7);
+	color: white;
+
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+.price {
+  color: grey;
+  font-size: 22px;
+}
+

@@ -1,0 +1,56 @@
+
+
+<html>
+	<head>
+		<title>Login </title>
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<script>
+			function formvalidate(){
+			var username=document.f2.username.value;
+			var password=document.f2.password.value;
+			if (username==null || username==""){  
+				alert("Name can't be blank");  
+				return false;  
+			}else if(password.length<6){  
+				alert("Password must be at least 6 characters long.");  
+		return false;  
+  }
+			
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="main">
+				<ul>
+					<li class="active"><a href="home.html">Home</a></li>
+					<li><a href="signup.html">SignUp</a></li>
+					<li><a href="contactus.html">Contact</a></li>
+					<li><a href="aboutus.html">AboutUs</a></li>
+				</ul>
+			</div>
+			<div id="nav">
+			<ul>
+				<br>
+				<br>
+				<br>
+				<br>
+				<li><a href="men.html">MEN</a></li><br>
+				<li><a href="women.html">WOMEN</a></li><br>
+				<li><a href="kids.html">KIDS</a></li><br>
+			</ul>
+		</div>
+		<form name="f2" method="post" onsubmit="return formvalidate()">
+			<label for="username">Username</label>
+			<input type="text" name="username"><br>
+			<label for="password">Password</label>
+			<input type="text" name="password"><br>
+			<input type="submit" value="Login"><br>
+			<p>If you are not a registered member please <a href="signup.html">Register Here</a></p>
+		</form>
+		</header>
+		<div id="footer" align="center">
+				<p>@2019 Ethos Watch Boutiques. All Rights Reserved.</p>
+			</div>
+	</body>
+</html>

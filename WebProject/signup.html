@@ -1,0 +1,93 @@
+
+<html>
+	<head>
+		<title>SignUp </title>
+		<link rel="stylesheet" type="text/css" href="css/signup.css">
+		<script>
+			function checkn(){
+				if(f1.firstname.value.length==0)
+				{
+					alert("please enter the name");
+				}
+			}
+			function check1(){
+				if(f1.lastname.value.length==0)
+				{
+					alert("please enter the name");
+				}
+			}
+			function check2(){
+				if(f1.email.value.length==0)
+				{
+					alert("Enter the correct email id");
+				}
+			}
+			function check3(){
+				if(f1.username.value.length==0)
+				{
+					alert("please enter the name");
+				}
+			}
+			function check4(){
+				if(f1.password.value.length==0)
+				{
+					alert("please enter the password");
+				}
+			}
+			function sub(){
+				if(f1.emailid.value.length==0 || f1.firstname.value.length==0 || f1.password.value.length==0 || f1.username.value.length==0 || f1.lastname.value.length==0)
+				{
+					alert("please fill the empty field");
+					return false;
+				}
+				else{
+					alert("thanks for entering the details");
+					return true;
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="main">
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li class="active"><a href="signup.html">SignUp</a></li>
+					<li><a href="contactus.html">Contact</a></li>
+					<li><a href="aboutus.html">AboutUs</a></li>
+				</ul>
+			</div>
+			<div id="nav">
+			<ul>
+				<br>
+				<br>
+				<br>
+				<br>
+				<li><a href="men.html">MEN</a></li><br>
+				<li><a href="women.html">WOMEN</a></li><br>
+				<li><a href="kids.html">KIDS</a></li><br>
+			</ul>
+		</div>
+		<form name="f1">
+			<br>
+			<label for="firstname">First Name</label>
+			<input type="text" name="firstname" required onblur="checkn()"><br>
+			<label for="lastname">Last Name</label>
+			<input type="text" name="lastname"  required onblur="check1()"><br>
+			<label for="email">Email</label>
+			<input type="text" name="email" required onblur="check2()"><br>
+			<label for="username">Username</label>
+			<input type="text" name="username" required onblur="check3()"><br>
+			<label for="password">Password</label>
+			<input type="text" name="password"required onblur="check4()"><br>
+			<input type="submit" value="Register" onclick="sub()"><br>
+			<p>If you are registered member please<a href="login.html">Log In Here</a></p>
+		</form>
+		</header>
+		<div id="footer" align="center">
+				<p>@2019 Ethos Watch Boutiques. All Rights Reserved.</p>
+			</div>
+		
+	</body>
+</html>

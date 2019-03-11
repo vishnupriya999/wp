@@ -1,0 +1,71 @@
+
+<html>
+	<head>
+		<title> Kids Watches</title>
+		<link rel="stylesheet" type="text/css" href="css/m1.css">
+		<script>
+			function call(){
+				var x=document.forms["f1"]["address"];
+				if(x=="")
+				{
+					alert("name must be filled ");
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="signup.html">SignUp</a></li>
+				<li><a href="contactus.html">Contact</a></li>
+				<li><a href="aboutus.html">AboutUs</a></li>
+			</ul>
+			<div id="nav">
+				<ul>
+					<br>
+					<br>
+					<br>
+					<br>
+					<li><a href="men.html">MEN</a></li><br>
+					<li><a href="women.html">WOMEN</a></li><br>
+					<li class="active"><a href="kids.html">KIDS</a></li><br>
+				</ul>
+			</div>
+			<div class="container">
+				<img src="images/k4.jpg" alt="watches" height="400px" width="400px" style="display:block;margin-left:auto;margin-right:auto;"> <br>
+				<center><font color="white"><h1>ESprit Blue</h1></font>
+				<p class="price"><style="display:block;margin-left:auto;margin-right:auto;">₹299</p></center>
+				<font color="white">	<h2>Product Description</h2>
+			<h4>A smartwatch that (actually) looks the part. With a new full-round digital display, 
+			this watch offers multiple features like customizable faces, discreet notifications and automatic activity 
+			tracking to help make your life easier and a bit more stylish. Specs - Dial Diameter - 45 mm, Strap Width - 22 mm.
+			Wear OS by Google. Water Resistant - 5 Bar (Shower). Case Thickness - 12.5 mm. 300mAh Magnetic Chargeable. Band Length - 160 - 210 mm.</h4></font><br>
+			<form name="f1" onsubmit="return call()" method="post">
+				<font color="white"><b><h2>Delivery Address</h2></b></font><br>
+				<input type="text" name="address" size="30" height="400px"><br><br>
+				<select>
+				<option selected>Chennai
+				<option>Banglore
+				<option>Trichy
+				<option>Coimbatore
+				</select><br><br>
+				<font color="white"><b><h2>Phone Number</h2></b></font><br>
+				<input type="text" name="phonenumber"><br>
+				<input type="submit" value="submit" >
+
+			</form>
+			<br>
+			<a href="signup.html"><button class="btn"><h1>Buy</h1></button></a>
+		
+			</div>
+		
+
+
+		</header>
+		<div id="footer" align="center">
+				<p>@2019 Ethos Watch Boutiques. All Rights Reserved.</p>
+			</div>
+	</body>
+</html>
