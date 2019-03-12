@@ -4,12 +4,33 @@
 		<title> Kids Watches</title>
 		<link rel="stylesheet" type="text/css" href="css/m1.css">
 		<script>
-			function call(){
-				var x=document.forms["f1"]["address"];
-				if(x=="")
+			function checkA(){
+				if(f1.address.value.length==0)
 				{
-					alert("name must be filled ");
+					alert("Please enter the delivery address");
+				}
+			}
+			function checkB(){
+				if(f1.phonenumber.value.length==0)
+				{
+					alert("Enter the phone number");
+				}
+				
+				if (isNaN(document.f1.phonenumber.value))
+				{
+					alert('Invalid Phonenumber');
 					return false;
+				}
+			}
+			function val(){
+				if(f1.address.value.length==0 || f1.phonenumber.value.length==0)
+				{	
+					alert("Please fill the empty field");
+					return false;
+				}
+				else {
+					alert("Thanks for entering the details.Please click buy button and signup to place your order.");
+					return true;
 				}
 			}
 		</script>
@@ -44,7 +65,7 @@
 			Wear OS by Google. Water Resistant - 5 Bar (Shower). Case Thickness - 12.5 mm. 300mAh Magnetic Chargeable. Band Length - 160 - 210 mm.</h4></font><br>
 			<form name="f1" onsubmit="return call()" method="post">
 				<font color="white"><b><h2>Delivery Address</h2></b></font><br>
-				<input type="text" name="address" size="30" height="400px"><br><br>
+				<input type="text" name="address" size="30" height="400px"onblur="checkA()"><br><br>
 				<select>
 				<option selected>Chennai
 				<option>Banglore
@@ -52,8 +73,8 @@
 				<option>Coimbatore
 				</select><br><br>
 				<font color="white"><b><h2>Phone Number</h2></b></font><br>
-				<input type="text" name="phonenumber"><br>
-				<input type="submit" value="submit" >
+				<input type="text" name="phonenumber" onblur="checkB()"><br>
+				<input type="submit" value="submit" onclick="val()">
 
 			</form>
 			<br>
