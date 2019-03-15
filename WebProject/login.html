@@ -1,21 +1,46 @@
-
-
+ 
 <html>
 	<head>
 		<title>Login </title>
 		<link rel="stylesheet" type="text/css" href="css/login.css">
 		<script>
-			function formvalidate(){
-			var username=document.f2.username.value;
-			var password=document.f2.password.value;
-			if (username==null || username==""){  
-				alert("Name can't be blank");  
-				return false;  
-			}else if(password.length<6){  
-				alert("Password must be at least 6 characters long.");  
-		return false;  
-  }
+		function check1()
+		{
+			if(f1.username.value.length==0)
+				{
+					alert(" Name should not be empty!");
+					f1.username.focus();
+					return false;
+
+				}
+		}
+		function check2()
+		{
+				var password=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z0-9])(?!.*\s).{7,}$/;
+				y=f1.password.value;
+				if(y.match(password))
+				{
+					return true;
+				}
+				else
+				{
+					alert("Must contain atleast one number and one uppercase and lowercase, and atleast 7 or more characters");
+					f1.password.focus();
+					return false;
+				}
+
 			
+		}
+		function check3(){
+				if(f1.username.value.length==0 || f1.password.value.length==0 )
+				{
+					alert("Please fill the empty field");
+					
+				}
+				else{
+					alert("Thanks for entering the details.");
+					
+				}
 			}
 		</script>
 	</head>
@@ -40,12 +65,12 @@
 				<li><a href="kids.html">KIDS</a></li><br>
 			</ul>
 		</div>
-		<form name="f2" method="post" onsubmit="return formvalidate()">
+		<form name="f1" method="post">
 			<label for="username">Username</label>
-			<input type="text" name="username"><br>
+			<input type="text" name="username" onchange="check1()"><br>
 			<label for="password">Password</label>
-			<input type="text" name="password"><br>
-			<input type="submit" value="Login"><br>
+			<input type="password" name="password" onchange="check2()"><br>
+			<input type="submit" name="submit" value="Login" onsubmit="check3()"><br>
 			<p>If you are not a registered member please <a href="signup.html">Register Here</a></p>
 		</form>
 		</header>
